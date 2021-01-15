@@ -5,10 +5,12 @@ import java.util.Date;
 import java.util.List;
 
 public class Contract {
+	
 	private int number;
 	private Date date;
 	private double totalValue;
-	private List<Installment> installments = new ArrayList<>();
+	
+	List<Installment> installments = new ArrayList<>();
 	
 	public Contract() {
 		
@@ -44,6 +46,11 @@ public class Contract {
 		this.totalValue = totalValue;
 	}
 	
+		
+	public List<Installment> getInstallments() {
+		return installments;
+	}
+
 	public void addInstallment(Installment installment) {
 		installments.add(installment);
 	}
